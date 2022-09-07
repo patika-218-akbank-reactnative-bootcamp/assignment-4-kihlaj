@@ -3,10 +3,10 @@ import React from 'react'
 
 import styles from './Input.style'
 
-const Input = ({ placeholder, onChangeText }) => {
+const Input = ({ placeholder, value, onChangeText }) => {
   return (
     <View style={styles.container}>
-      <TextInput placeholder={placeholder} onChangeText={onChangeText} />
+      <TextInput style={styles.text} placeholder={placeholder} onChangeText={onChangeText} value={value} />
     </View>
   )
 }
