@@ -3,10 +3,10 @@ import React from 'react'
 
 import Main from './navigation/main';
 
-const App = () => {
+const Router = () => {
   return (
     <Main />
   )
 }
 
-export default App
+export default Router
