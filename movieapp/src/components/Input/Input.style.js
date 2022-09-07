@@ -4,10 +4,11 @@ const styles = StyleSheet.create({
   container: {
     padding: 0,
     margin: 10,
-    backgroundColor: "#e0e0e0",
+    backgroundColor: "#fff",
     borderRadius: 15,
   },
-  text: { padding: 8, marginLeft: 5, fontSize: 16, color: "#000000" },
+  // when changing theme change color to #fff
+  text: { padding: 8, marginLeft: 5, fontSize: 16, color: "#000" },
 });
 
 export default styles;

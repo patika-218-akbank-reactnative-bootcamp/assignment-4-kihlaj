@@ -1,11 +1,16 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+import { NavigationContainer } from '@react-navigation/native';
 
-import Main from './navigation/main';
+import AuthNavigator from './navigation/auth'
+import HomeNavigator from './navigation/home'
+
 
 const Router = () => {
+  let isSignedIn = false;
   return (
-    <Main />
+    <NavigationContainer>
+      {isSignedIn ? <HomeNavigator /> : <AuthNavigator />}
+    </NavigationContainer>
   )
 }
 

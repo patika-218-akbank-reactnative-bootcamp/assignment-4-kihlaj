@@ -1,16 +1,13 @@
-import { View, Text, Image, KeyboardAvoidingView, ScrollView } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import React from 'react'
-import { Formik } from 'formik';
+import { Formik } from 'formik'
 
 import styles from './SignIn.style'
 import Input from '../../../components/Input'
 import Button from '../../../components/Button'
 
-
-const SignIn = () => {
-  function handleLogin(values) {
-    console.log(values)
-  }
+const SignIn = ({ navigation }) => {
+  const handleSignIn = (values) => { }
 
   return (
     <View style={styles.container}>
@@ -19,15 +16,10 @@ const SignIn = () => {
       </View>
       <Formik
         initialValues={{ username: '', email: '', password: '', passwordAgain: '', }}
-        onSubmit={handleLogin}
+        onSubmit={handleSignIn}
       >
         {({ handleChange, handleSubmit, values }) => (
           <View style={styles.body_container}>
-            <Input
-              placeholder="Username"
-              onChangeText={handleChange('username')}
-              value={values.username}
-            />
             <Input
               placeholder="Email"
               onChangeText={handleChange('email')}
@@ -38,17 +30,15 @@ const SignIn = () => {
               onChangeText={handleChange('password')}
               value={values.password}
             />
-            <Input
-              placeholder="Password Again"
-              onChangeText={handleChange('passwordAgain')}
-              value={values.passwordAgain}
-            />
-            <Button onPress={handleSubmit} text="Register" />
+            <Button onPress={handleSubmit} text="Log In" />
           </View>
         )}
       </Formik>
+      <View style={{ alignItems: 'center' }}>
+        <Text>Don't have an account?</Text>
+        <Button onPress={() => navigation.navigate('SignUp')} text="Register" />
+      </View>
     </View >
-
   )
 }
 

@@ -1,3 +1,15 @@
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 
-export default StyleSheet.create({});
+const { width, height } = Dimensions.get('window');
+
+const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: '#48D4FF' },
+  logo: {
+    height: height / 2.5,
+    width: width / 2.5,
+    resizeMode: 'contain',
+    alignSelf: 'center',
+  }
+});
+
+export default styles;
