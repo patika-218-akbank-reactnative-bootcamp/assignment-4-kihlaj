@@ -1,4 +1,4 @@
-import { View, Text, Image, KeyboardAvoidingView, ScrollView } from 'react-native'
+import { View, Text, Image, KeyboardAvoidingView, ScrollView, Dimensions } from 'react-native'
 import React from 'react'
 import { Formik } from 'formik';
 import axios from 'axios';
@@ -10,9 +10,9 @@ import Button from '../../../components/Button'
 
 const SignUp = ({ navigation }) => {
   const handleRegister = (values) => {
-    axios.post("http://localhost:5000/api/auth/login", values).then((res) => {
-      localStorage.setItem("login")
-    }).catch()
+    // axios.post("http://localhost:5000/api/auth/login", values).then((res) => {
+    //   localStorage.setItem("login")
+    // }).catch()
   }
 
   return (
@@ -51,8 +51,8 @@ const SignUp = ({ navigation }) => {
         )}
       </Formik>
       <View style={{ alignItems: 'center' }}>
-        <Text>Already registered?</Text>
-        <Button onPress={() => navigation.navigate('SignIn')} text="Sign In" />
+        <Text style={{ fontSize: 15 }}>Already registered?</Text>
+        <Button style={{backgroundColor:'red'}} onPress={() => navigation.navigate('SignIn')} text="Sign In" />
       </View>
     </View >
   )

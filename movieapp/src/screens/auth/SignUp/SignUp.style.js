@@ -3,10 +3,15 @@ import { Dimensions, StyleSheet } from 'react-native';
 const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#48D4FF' },
+  container: {
+    backgroundColor: '#48D4FF',
+    flexDirection: 'column',
+    flexGrow: 1,
+    justifyContent: 'space-between'
+  },
   logo: {
-    height: height / 2.5,
-    width: width / 2.5,
+    height: height / 2.7,
+    width: width / 2.7,
     resizeMode: 'contain',
     alignSelf: 'center',
   }
