@@ -50,7 +50,7 @@ const SignUp = ({ navigation }) => {
           </View>
         )}
       </Formik>
-      <View style={{ alignItems: 'center' }}>
+      <View style={{ alignItems: 'center', flexDirection: 'row', justifyContent: 'center' }}>
         <Text style={{ fontSize: 15 }}>Already registered?</Text>
         <Button style={{backgroundColor:'red'}} onPress={() => navigation.navigate('SignIn')} text="Sign In" />
       </View>

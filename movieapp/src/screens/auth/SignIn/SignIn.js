@@ -34,11 +34,11 @@ const SignIn = ({ navigation }) => {
           </View>
         )}
       </Formik>
-      <View style={{ alignItems: 'center' }}>
-        <Text>Don't have an account?</Text>
+      <View style={{ alignItems: 'center', flexDirection: 'row', justifyContent: 'center' }}>
+        <Text> Don't have an account?</Text>
         <Button onPress={() => navigation.navigate('SignUp')} text="Register" />
       </View>
-    </View >
+    </View>
   )
 }
 
